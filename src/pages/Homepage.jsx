@@ -1,4 +1,4 @@
 const Homepage = () => {
-  return <>Homepage3</>;
+  return <>Homepage</>;
 };
 export default Homepage;
