@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DashboardLayout />}>
           <Route index exact element={<Homepage />} />
-          <Route exact path="/:id" element={<InnerPage />} />
+          <Route exact path="/innerpage" element={<InnerPage />} />
         </Route>
       </Routes>
     </div>

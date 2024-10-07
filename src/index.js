@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
+import "@fontsource/outfit"; // Defaults to weight 400
 import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-free/js/all.js";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

@@ -1,38 +1,83 @@
-import Navbar from "../Navbar/TopNav";
-import { useLocation, Link } from "react-router-dom";
-
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 const Header = () => {
-  return (
-    <>
-      <header id="header" class="header fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-          <a href="/" class="logo d-flex align-items-center">
-            <img
-              src="https://www.skarosoft.com/casino2/assets/img/logo.png"
-              alt="logo"
-            />
-          </a>
+  // State to manage whether the device is mobile
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [navbarClass, setNavbarClass] = useState("navbar");
 
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li>
-                <a class="nav-link scrollto active" href="index.html">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="about.html">
-                  About
-                </a>
-              </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav>
-        </div>
-      </header>
-    </>
+  // Toggle function for the navbar class
+  const toggleNavbar = () => {
+    setNavbarClass((prevClass) =>
+      prevClass === "navbar" ? "navbar-mobile" : "navbar"
+    );
+  };
+
+  // Effect to handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust this breakpoint as needed
+      if (window.innerWidth >= 768) {
+        setNavbarClass("navbar"); // Reset navbar class on desktop
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return (
+    <header id="header" className="header">
+      <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" className="logo d-flex align-items-center">
+          <img
+            src="https://www.skarosoft.com/casino2/assets/img/logo.png"
+            alt="logo"
+          />
+        </a>
+
+        <nav id="navbar" className={navbarClass}>
+          <ul>
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : "inactive"}`
+                }
+                onClick={isMobile ? toggleNavbar : undefined} // Only attach onClick for mobile
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/innerpage"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : "inactive"}`
+                }
+                onClick={isMobile ? toggleNavbar : undefined} // Only attach onClick for mobile
+              >
+                Inner Page
+              </NavLink>
+            </li>
+          </ul>
+          <i
+            className={navbarClass === "navbar" ? "fa fa-bars" : "fa fa-close"}
+            aria-hidden="true"
+            onClick={isMobile ? toggleNavbar : undefined} // Only attach onClick for mobile
+          ></i>
+        </nav>
+      </div>
+    </header>
   );
 };
+
 export default Header;
