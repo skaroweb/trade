@@ -8,10 +8,7 @@ const Footer = () => {
           <div className="row gy-4">
             <div className="col-lg-5 col-md-12 footer-info">
               <a href="index.html" className="logo d-flex align-items-center">
-                <img
-                  src="https://www.skarosoft.com/casino2/assets/img/logo.png"
-                  alt=""
-                />
+                <img src="/quantumai.png" alt="" />
               </a>
               <p>
                 PlayBestOntario strives to bring visitors honest and accurate

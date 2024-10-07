@@ -38,10 +38,7 @@ const Header = () => {
     <header id="header" className="header">
       <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="/" className="logo d-flex align-items-center">
-          <img
-            src="https://www.skarosoft.com/casino2/assets/img/logo.png"
-            alt="logo"
-          />
+          <img src="/quantumai.png" alt="logo" />
         </a>
 
         <nav id="navbar" className={navbarClass}>
