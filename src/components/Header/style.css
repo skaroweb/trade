@@ -240,3 +240,8 @@
     right: 15px;
   }
 }
+@media (min-width: 769px) {
+  #navbar i.fa.fa-bars {
+    display: none;
+  }
+}
