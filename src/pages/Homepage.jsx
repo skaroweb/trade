@@ -1,3 +1,4 @@
+import BrokerRating from "../components/BrokerRating";
 import Tablepress from "../components/Tablepress";
 
 const Homepage = () => {
@@ -29,7 +30,9 @@ const Homepage = () => {
             regulated casinos.
           </p>
         </div>
-        {/* <Tablepress /> */}
+        <Tablepress provider="quentom" />
+        <Tablepress provider="other" />
+        <BrokerRating />
       </div>
     </>
   );
