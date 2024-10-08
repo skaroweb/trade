@@ -7,10 +7,10 @@ const Tablepress = ({ provider }) => {
   // Dummy data
   const dummyData = [
     {
-      provider: "quentom",
+      provider: "quantum",
       rank: 1,
-      bookie: "Codere",
-      logo: "https://cdn.casasdeapuestas.com/bookmakers/codere.svg",
+      bookie: "Quantum",
+      logo: "img/Quantum_Ai.jpg",
       commission: "0% commissions",
       depositInfo: "Real-time deposit by PayPal, credit card etc.",
       minDeposit: "Min. deposit 100$",
@@ -24,26 +24,107 @@ const Tablepress = ({ provider }) => {
         "firefox",
       ],
       visitors: "6844",
-      rating: "9.6",
+      rating: "9.9",
       editorRating: 4.8,
-      bonus: "¡Bono 200€!",
+      bonus: "Min. deposit 100$",
       link: "https://www.casasdeapuestas.com/codere",
+      backgroundColor: "#00042b",
     },
     {
-      provider: "other",
+      provider: "activtrades",
       rank: 2,
-      bookie: "Another Bookie",
-      logo: "https://example.com/logo.svg",
-      commission: "5% commissions",
-      depositInfo: "Deposits via multiple methods.",
-      minDeposit: "Min. deposit 50$",
-      platforms: ["Windows", "Mac"],
-      supportIcons: ["windows", "apple"],
+      bookie: "Activ Trades",
+      logo: "img/Active.jpg",
+      commission: "Copy other dealers or let yourself be copied",
+      depositInfo: "Invest from 0.99$ in shares",
+      minDeposit: "Min. deposit 100$",
+      platforms: ["Windows", "Mac", "Android", "iOS"],
+      supportIcons: [
+        "windows",
+        "apple",
+        "linux",
+        "android",
+        "chrome",
+        "firefox",
+      ],
       visitors: "1234",
-      rating: "8.0",
+      rating: "8.9",
       editorRating: 4.0,
-      bonus: "¡Bono 100€!",
+      bonus: "Min. deposit 100$",
       link: "https://www.example.com",
+      backgroundColor: "#f5f5f5",
+    },
+    {
+      provider: "ava",
+      rank: 3,
+      bookie: "Ava",
+      logo: "img/Ava.jpg",
+      commission: "Copy other dealers or let yourself be copied",
+      depositInfo: "Invest from 0.99$ in shares",
+      minDeposit: "Min. deposit 100$",
+      platforms: ["Windows", "Mac", "Android", "iOS"],
+      supportIcons: [
+        "windows",
+        "apple",
+        "linux",
+        "android",
+        "chrome",
+        "firefox",
+      ],
+      visitors: "1234",
+      rating: "8.9",
+      editorRating: 4.0,
+      bonus: "Min. deposit 100$",
+      link: "https://www.example.com",
+      backgroundColor: "#f5f5f5",
+    },
+    {
+      provider: "plus500",
+      rank: 4,
+      bookie: "Plus500",
+      logo: "img/Plus500.jpg",
+      commission: "Advanced trading platform",
+      depositInfo: "Competitive fees",
+      minDeposit: "Min. deposit 100$",
+      platforms: ["Windows", "Mac", "Android", "iOS"],
+      supportIcons: [
+        "windows",
+        "apple",
+        "linux",
+        "android",
+        "chrome",
+        "firefox",
+      ],
+      visitors: "1234",
+      rating: "9.9",
+      editorRating: 4.0,
+      bonus: "Min. deposit 100$",
+      link: "https://www.example.com",
+      backgroundColor: "#f5f5f5",
+    },
+    {
+      provider: "capital",
+      rank: 5,
+      bookie: "Capital",
+      logo: "img/Capital.jpg",
+      commission: "Copy other dealers or let yourself be copied",
+      depositInfo: "Invest from 0.99$ in shares",
+      minDeposit: "Min. deposit 100$",
+      platforms: ["Windows", "Mac", "Android", "iOS"],
+      supportIcons: [
+        "windows",
+        "apple",
+        "linux",
+        "android",
+        "chrome",
+        "firefox",
+      ],
+      visitors: "1234",
+      rating: "8.9",
+      editorRating: 4.0,
+      bonus: "Min. deposit 100$",
+      link: "https://www.example.com",
+      backgroundColor: "#fff",
     },
   ];
 
@@ -63,13 +144,11 @@ const Tablepress = ({ provider }) => {
             data-tags="app,bizum,caballos,esports,fisicas,paypal,streaming"
             aria-expanded="true"
           >
+            <div class="broker__num _top"> {item.rank} </div>
             <span
               data-lnk={btoa(item.link)} // Encode the link
               className="bookmarker-image"
             >
-              <span className="rank_count" id="first_count">
-                {item.rank}
-              </span>
               <div
                 className="bookie squared"
                 data-bookie={item.bookie.toLowerCase()}
@@ -81,15 +160,14 @@ const Tablepress = ({ provider }) => {
                   height="23px"
                   alt={item.bookie}
                   src={item.logo}
+                  style={{ backgroundColor: item.backgroundColor }}
                 />
               </div>
             </span>
-            <div className="padding d-flex desc" style={{ flexBasis: "70%" }}>
+            <div className="padding d-flex desc" style={{ flexBasis: "50%" }}>
               <div className="w-100">
                 <ul className="broker__list">
-                  <li>
-                    <strong>{item.commission}</strong>
-                  </li>
+                  <li>{item.commission}</li>
                   <li>{item.depositInfo}</li>
                   <li>{item.minDeposit}</li>
                   <li>For: {item.platforms.join(", ")}</li>
@@ -102,10 +180,6 @@ const Tablepress = ({ provider }) => {
                       aria-hidden="true"
                     ></i>
                   ))}
-                </div>
-                <div className="broker-users">
-                  <i className="fa fa-users" aria-hidden="true"></i>
-                  <span>{item.visitors} visited this page today</span>
                 </div>
               </div>
             </div>
@@ -160,7 +234,7 @@ const Tablepress = ({ provider }) => {
             >
               <span className="fw-bold text-center">{item.bonus}</span>
               <button role="button">
-                Visitar
+                Open Your Free Account
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="lock"
@@ -176,7 +250,11 @@ const Tablepress = ({ provider }) => {
                     transform="translate(-4 -1)"
                   ></path>
                 </svg>
-              </button>
+              </button>{" "}
+              <div className="broker-users">
+                <i className="fa fa-users" aria-hidden="true"></i>
+                <span>{item.visitors} visited this page today</span>
+              </div>
             </div>
           </li>
         ))}

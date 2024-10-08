@@ -84,12 +84,12 @@
 #navbar .active,
 #navbar .active:focus,
 #navbar li:hover > a {
-  color: #d20202;
+  color: #008000;
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #d20202;
+  background: #008000;
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
