@@ -11,11 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DashboardLayout />}>
           <Route index exact element={<Homepage />} />
-<<<<<<< HEAD
-          <Route exact path="/:id" element={<InnerPage />} />
-=======
           <Route exact path="/provider/:id" element={<InnerPage />} />
->>>>>>> aasik
         </Route>
       </Routes>
     </div>

@@ -83,15 +83,9 @@ span.read_full svg {
 
 .rating-text,
 #ratings_home .rating-text {
-<<<<<<< HEAD
-  font-size: 35px;
-  font-weight: 700;
-  color: #008000;
-=======
   font-size: 25px;
   font-weight: 700;
   color: #000;
->>>>>>> vijay
 }
 
 #ratings_home h3 {
@@ -110,11 +104,7 @@ span.read_full svg {
 #ratings_home [role="button"] {
   margin: 15px 0;
   width: 100%;
-<<<<<<< HEAD
-  background: #008000;
-=======
   background: #0157ff;
->>>>>>> vijay
   padding: 5px 15px;
   border-radius: 0.25rem;
   outline: none !important;
@@ -129,13 +119,6 @@ span.read_full svg {
   justify-content: center;
   align-items: center;
   height: 40px;
-<<<<<<< HEAD
-  text-transform: uppercase;
-}
-#ratings_home [role="button"]:hover {
-  background-color: #000;
-=======
->>>>>>> vijay
 }
 .broker__list {
   font-weight: 500;
@@ -150,35 +133,15 @@ span.read_full svg {
   display: -ms-flexbox;
   display: flex;
   gap: 0.625rem;
-<<<<<<< HEAD
-=======
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
->>>>>>> vijay
 }
 
 ul li {
   list-style: none;
 }
 .broker__list li::before {
-<<<<<<< HEAD
-  flex: 0 0 0.8125rem;
-  width: 0.8125rem;
-  height: 0.8125rem;
-  content: "\f058";
-  display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #008000;
-}
-.broker__support > i {
-  margin-right: 15px;
-  font-size: 20px;
-=======
   content: "";
   display: block;
   -webkit-box-flex: 0;
@@ -191,17 +154,12 @@ ul li {
 }
 .broker__support > i {
   margin-right: 10px;
->>>>>>> vijay
 }
 .broker-users {
   margin-top: 10px;
 }
 .broker-users > i {
   margin-right: 10px;
-<<<<<<< HEAD
-  color: #008000;
-=======
->>>>>>> vijay
 }
 
 #ratings_home [role="button"] svg {
@@ -295,57 +253,20 @@ ul li {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-<<<<<<< HEAD
-#ratings_home li[aria-expanded="true"]:hover {
-  box-shadow: 0 0 16px 0 rgb(0 0 0 / 20%);
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -ms-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
-}
-#ratings_home .bookmarker-image {
-  display: flex;
-=======
 
 #ratings_home .bookmarker-image {
   display: block;
->>>>>>> vijay
   padding: 2px;
   cursor: pointer;
   padding: 15px;
   border: none;
   position: relative;
   list-style-type: none;
-<<<<<<< HEAD
-  align-items: center;
-}
-.bookie.squared img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.broker__num._top {
-  display: flex;
-  align-items: center;
-  padding: 0px 15px 0px 25px;
-  font-size: 40px;
-  font-weight: bold;
-}
-@media (max-width: 1024px) {
-  .broker__num._top {
-    display: none;
-  }
-  #ratings_home .bookmarker-image {
-    max-height: 120px;
-    padding-top: 30px;
-=======
 }
 
 @media (max-width: 1024px) {
   #ratings_home .bookmarker-image {
     max-height: 120px;
->>>>>>> vijay
   }
 
   #ratings_home .bookmarker-image .bookie {

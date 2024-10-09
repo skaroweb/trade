@@ -30,17 +30,11 @@ const Tablepress = ({ provider }) => {
         "firefox",
       ],
       visitors: "6844",
-<<<<<<< HEAD
       rating: "9.9",
       editorRating: 4.8,
-<<<<<<< HEAD
-      bonus: "¡Bono 200€!",
-      link: "quentom", // Use a string for routing
-=======
       bonus: "Min. deposit 100$",
       link: "provider/quentom",
       backgroundColor: "#00042b",
->>>>>>> daa7de5cf31be64d27dd8473e1ab151129774376
     },
     {
       provider: "activtrades",
@@ -62,10 +56,6 @@ const Tablepress = ({ provider }) => {
       visitors: "1234",
       rating: "8.9",
       editorRating: 4.0,
-<<<<<<< HEAD
-      bonus: "¡Bono 100€!",
-      link: "other", // Use a string for routing
-=======
       bonus: "Min. deposit 100$",
       link: "provider/activtrades",
       backgroundColor: "#f5f5f5",
@@ -141,29 +131,6 @@ const Tablepress = ({ provider }) => {
       bonus: "Min. deposit 100$",
       link: "provider/capital",
       backgroundColor: "#fff",
->>>>>>> daa7de5cf31be64d27dd8473e1ab151129774376
-=======
-      rating: "9.6",
-      editorRating: 4.8,
-      bonus: "¡Bono 200€!",
-      link: "quentom", // Use a string for routing
-    },
-    {
-      provider: "other",
-      rank: 2,
-      bookie: "Another Bookie",
-      logo: "https://example.com/logo.svg",
-      commission: "5% commissions",
-      depositInfo: "Deposits via multiple methods.",
-      minDeposit: "Min. deposit 50$",
-      platforms: ["Windows", "Mac"],
-      supportIcons: ["windows", "apple"],
-      visitors: "1234",
-      rating: "8.0",
-      editorRating: 4.0,
-      bonus: "¡Bono 100€!",
-      link: "other", // Use a string for routing
->>>>>>> vijay
     },
   ];
 
@@ -187,20 +154,13 @@ const Tablepress = ({ provider }) => {
             data-tags="app,bizum,caballos,esports,fisicas,paypal,streaming"
             aria-expanded="true"
           >
-<<<<<<< HEAD
-            <div class="broker__num _top"> {item.rank} </div>
-=======
->>>>>>> vijay
             <span
               data-lnk={btoa(item.link)} // Encode the link
               className="bookmarker-image"
             >
-<<<<<<< HEAD
-=======
               <span className="rank_count" id="first_count">
                 {item.rank}
               </span>
->>>>>>> vijay
               <div
                 className="bookie squared"
                 data-bookie={item.bookie.toLowerCase()}
@@ -212,16 +172,6 @@ const Tablepress = ({ provider }) => {
                   height="23px"
                   alt={item.bookie}
                   src={item.logo}
-<<<<<<< HEAD
-                  style={{ backgroundColor: item.backgroundColor }}
-                />
-              </div>
-            </span>
-            <div className="padding d-flex desc" style={{ flexBasis: "50%" }}>
-              <div className="w-100">
-                <ul className="broker__list">
-                  <li>{item.commission}</li>
-=======
                 />
               </div>
             </span>
@@ -231,7 +181,6 @@ const Tablepress = ({ provider }) => {
                   <li>
                     <strong>{item.commission}</strong>
                   </li>
->>>>>>> vijay
                   <li>{item.depositInfo}</li>
                   <li>{item.minDeposit}</li>
                   <li>For: {item.platforms.join(", ")}</li>
@@ -245,13 +194,10 @@ const Tablepress = ({ provider }) => {
                     ></i>
                   ))}
                 </div>
-<<<<<<< HEAD
-=======
                 <div className="broker-users">
                   <i className="fa fa-users" aria-hidden="true"></i>
                   <span>{item.visitors} visited this page today</span>
                 </div>
->>>>>>> vijay
               </div>
             </div>
             <div className="d-flex align-items-center justify-content-center grade rating-container">
@@ -304,22 +250,8 @@ const Tablepress = ({ provider }) => {
               }}
             >
               <span className="fw-bold text-center">{item.bonus}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <button role="button" onClick={() => handleVisit(item.link)}>
-                Visitar
-=======
-              <button role="button">
-=======
-              <button role="button" onClick={() => handleVisit(item.link)}>
->>>>>>> aasik
                 Open Your Free Account
->>>>>>> daa7de5cf31be64d27dd8473e1ab151129774376
-=======
-              <button role="button" onClick={() => handleVisit(item.link)}>
-                Visitar
->>>>>>> vijay
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="lock"
@@ -335,15 +267,11 @@ const Tablepress = ({ provider }) => {
                     transform="translate(-4 -1)"
                   ></path>
                 </svg>
-<<<<<<< HEAD
               </button>{" "}
               <div className="broker-users">
                 <i className="fa fa-users" aria-hidden="true"></i>
                 <span>{item.visitors} visited this page today</span>
               </div>
-=======
-              </button>
->>>>>>> vijay
             </div>
           </li>
         ))}

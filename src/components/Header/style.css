@@ -84,11 +84,7 @@
 #navbar .active,
 #navbar .active:focus,
 #navbar li:hover > a {
-<<<<<<< HEAD
-  color: #008000;
-=======
   color: #d20202;
->>>>>>> vijay
 }
 
 .navbar .getstarted,
