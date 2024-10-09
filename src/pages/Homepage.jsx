@@ -30,8 +30,11 @@ const Homepage = () => {
             regulated casinos.
           </p>
         </div>
-        <Tablepress provider="quentom" />
-        <Tablepress provider="other" />
+        <Tablepress provider="quantum" />
+        <Tablepress provider="activtrades" />
+        <Tablepress provider="ava" />
+        <Tablepress provider="plus500" />
+        <Tablepress provider="capital" />
         <BrokerRating />
       </div>
     </>
