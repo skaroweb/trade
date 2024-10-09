@@ -7,13 +7,15 @@ import "./index.css";
 
 const DashboardLayout = ({ children }) => {
   return (
-    <div>
+    <>
       <Header />
       <div className="main">
-        <Outlet />
+        <div className="container">
+          <Outlet />
+        </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
