@@ -38,7 +38,7 @@ const Tablepress = ({ provider }) => {
       link: "quentom", // Use a string for routing
 =======
       bonus: "Min. deposit 100$",
-      link: "https://www.casasdeapuestas.com/codere",
+      link: "provider/quentom",
       backgroundColor: "#00042b",
 >>>>>>> daa7de5cf31be64d27dd8473e1ab151129774376
     },
@@ -67,7 +67,7 @@ const Tablepress = ({ provider }) => {
       link: "other", // Use a string for routing
 =======
       bonus: "Min. deposit 100$",
-      link: "https://www.example.com",
+      link: "provider/activtrades",
       backgroundColor: "#f5f5f5",
     },
     {
@@ -91,7 +91,7 @@ const Tablepress = ({ provider }) => {
       rating: "8.9",
       editorRating: 4.0,
       bonus: "Min. deposit 100$",
-      link: "https://www.example.com",
+      link: "provider/ava",
       backgroundColor: "#f5f5f5",
     },
     {
@@ -115,7 +115,7 @@ const Tablepress = ({ provider }) => {
       rating: "9.9",
       editorRating: 4.0,
       bonus: "Min. deposit 100$",
-      link: "https://www.example.com",
+      link: "provider/plus500",
       backgroundColor: "#f5f5f5",
     },
     {
@@ -139,7 +139,7 @@ const Tablepress = ({ provider }) => {
       rating: "8.9",
       editorRating: 4.0,
       bonus: "Min. deposit 100$",
-      link: "https://www.example.com",
+      link: "provider/capital",
       backgroundColor: "#fff",
 >>>>>>> daa7de5cf31be64d27dd8473e1ab151129774376
 =======
@@ -306,10 +306,14 @@ const Tablepress = ({ provider }) => {
               <span className="fw-bold text-center">{item.bonus}</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <button role="button" onClick={() => handleVisit(item.link)}>
                 Visitar
 =======
               <button role="button">
+=======
+              <button role="button" onClick={() => handleVisit(item.link)}>
+>>>>>>> aasik
                 Open Your Free Account
 >>>>>>> daa7de5cf31be64d27dd8473e1ab151129774376
 =======
