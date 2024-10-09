@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom"; // Import useLocation
+
 import "./index.css";
 
 function Sidebar() {
+  const location = useLocation(); // Get the current location
+  console.log(location);
   const [countryData, setCountryData] = useState({
     callingCode: "",
     countryName: "",
@@ -47,12 +51,16 @@ function Sidebar() {
     // Concatenate the calling code with the phone number
     const fullPhoneNumber = `${countryData.callingCode}${" "}${formData.phone}`;
 
+    // Extract the last segment of the pathname
+    const urlSegment = location.pathname.split("/").pop();
+
     const payload = {
       ...formData,
       phone: fullPhoneNumber, // Send the concatenated phone number
       phonecc: countryData.callingCode,
       countryName: countryData.countryName,
       country_code: countryData.countryCode, // Add the country code to the payload
+      provider: urlSegment, // Use the last segment of the pathname
     };
 
     try {

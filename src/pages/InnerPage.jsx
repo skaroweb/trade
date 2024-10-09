@@ -1,4 +1,6 @@
+import KeyFeature from "../components/KeyFeature";
 import Sidebar from "../components/Sidebar";
+import TradeDigi from "../components/TradeDigi";
 import "./Innerpage.css";
 const Innerpage = () => {
   return (
@@ -29,10 +31,12 @@ const Innerpage = () => {
             <div>
               <img
                 className="img-fluid"
-                src="img/Quantum_Ai_banner.jpeg"
+                src="/img/Quantum_Ai_banner.jpeg"
                 alt=""
               />
             </div>
+            <KeyFeature />
+            <TradeDigi />
           </div>
 
           <div className="col-md-4">
