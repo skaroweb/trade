@@ -35,6 +35,8 @@ const Homepage = () => {
         <Tablepress provider="ava" />
         <Tablepress provider="plus500" />
         <Tablepress provider="capital" />
+        <Tablepress provider="quentom" />
+        <Tablepress provider="other" />
         <BrokerRating />
       </div>
     </>
