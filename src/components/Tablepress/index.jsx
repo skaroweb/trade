@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useHistory
 import "./index.css";
 
 const Tablepress = ({ provider }) => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate(); // Initialize useHistory
 
   // Dummy data
   const dummyData = [
@@ -27,7 +29,7 @@ const Tablepress = ({ provider }) => {
       rating: "9.6",
       editorRating: 4.8,
       bonus: "¡Bono 200€!",
-      link: "https://www.casasdeapuestas.com/codere",
+      link: "quentom", // Use a string for routing
     },
     {
       provider: "other",
@@ -43,7 +45,7 @@ const Tablepress = ({ provider }) => {
       rating: "8.0",
       editorRating: 4.0,
       bonus: "¡Bono 100€!",
-      link: "https://www.example.com",
+      link: "other", // Use a string for routing
     },
   ];
 
@@ -52,6 +54,10 @@ const Tablepress = ({ provider }) => {
     const filteredData = dummyData.filter((item) => item.provider === provider);
     setData(filteredData);
   }, [provider]);
+
+  const handleVisit = (link) => {
+    navigate(`/${link}`); // Navigate to the dynamic route
+  };
 
   return (
     <div>
@@ -159,7 +165,7 @@ const Tablepress = ({ provider }) => {
               }}
             >
               <span className="fw-bold text-center">{item.bonus}</span>
-              <button role="button">
+              <button role="button" onClick={() => handleVisit(item.link)}>
                 Visitar
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
